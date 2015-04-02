@@ -1,0 +1,33 @@
+<!-- CLEANED AND COMMENTED -->
+
+<!-- This website contains the form to contact the team. The mail is sent to mansoureh.rousta@gmail.com at the moment (Lappeenranta, 5/March/2015)-->
+
+<% include header %>
+<title>Contact Us</title>
+
+<body>
+ <% include navbar %>
+ 
+ <br>
+ <br>
+ <br>
+ <div class="panel panel-primary">
+    <div class="panel-heading">
+     <div id="sa_contactdiv">
+      <form method="post" name=sa_htmlform style="margin:20px;color:black;" onsubmit="return sa_contactform()" action="mailto:mansoureh.rousta@gmail.com">
+       <table style="color:black;">
+        <tr><td>Name:<br><input type="text" name="name" style="color:black;"/></td></tr>
+        <tr><td>E-mail Address: <span style="color:#D70000">*</span><br><input type="email" name="email" required="true" /></td></tr>
+        <tr><td>Subject: <span style="color:#D70000">*</span><br><input type="text" name="subject" required="true" /></td></tr>
+        <tr><td>Message: <span style="color:#D70000">*</span><br><textarea name="message" cols="42" rows="9" required="true" style="resize:none;width:50%;"></textarea></td></tr>
+       <br>
+       <tr><td>
+       <div class="btn-group" role="group">
+       <button type="Submit" class="btn btn-default">Send Message</button>
+       </tr>
+      </table>
+     </form>
+     </div>
+     </div>
+</body>
+</html>

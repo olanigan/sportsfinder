@@ -1,0 +1,103 @@
+<!-- CLEANED AND COMMENTED -->
+
+<!-- This file contains the form to edit the events-->
+<% include header %>
+<body>
+<% include navbar %>
+
+<div class="containerDown">
+  <div class="col-md-5 twoSidesLeft">
+    <% events.forEach(function(event){ %>
+      <form class="form-horizontal" action="/event" method="post">
+        <fieldset>
+        
+        <!-- Form Name -->
+        <legend>Edit your Event</legend>
+        
+        <!-- Title Text input-->
+        <div class="control-group">
+          <label class="control-label" for="title">Title of the event</label>
+          <div class="controls">
+            <input id="title" name="title" placeholder="Enter title" class="form-control" required="" type="text" value='<%=event.Title%>'>
+          </div>
+        </div>
+        
+        <!-- Description Textarea -->
+        <div class="control-group">
+          <label class="control-label" for="desc">Description</label>
+          <div class="controls">                     
+            <textarea id="desc" name="desc" placeholder="Enter the description" required="" value='<%=event.Description%>'></textarea>
+          </div>
+        </div>
+        
+        <!-- Date input -->
+        <div class="control-group">
+          <label class="control-label" for="date">Date</label>
+          <div class="controls">
+            <input type="datetime-local" name="date" required="" value='<%=event.Date_%>'>
+          </div>
+        </div>
+        
+        <!-- Address Text input-->
+        <div class="control-group">
+          <label class="control-label" for="address">Address</label>
+          <div class="controls">
+            <input id="address" name="address" placeholder="Enter the address" class="form-conrol" required="" type="text" value='<%=event.Address%>'>
+          </div>
+        </div>
+        
+        <!-- Access checkbox -->
+        <div class="control-group">
+          <label class="control-label" for="access">Public</label>
+          <div class="controls">
+            <input type="checkbox" name="access">
+          </div>
+        </div>
+        
+        <!-- Type of facility -->
+        <div class="control-group ui-widget">
+          <label for="facility">Select Facility: </label><br />
+          <% include rousta2 %>
+        </div>
+             
+         <!-- Number of guests -->
+        <div class="control-group">
+          <label class="control-label" for="maxguests">Max. guests</label>
+          <div class="controls">
+            <input type="number" name="maxguests" required="" value='<%=event.MaxGuest%>'>
+          </div>
+        </div>
+          
+        <!-- Password Text input-->
+        <div class="control-group">
+          <label class="control-label" for="password">Password</label>
+          <div class="controls">
+            <input id="password" name="password" placeholder="Enter your new password" class="form-conrol" required="" type="text" value='<%=event.Password%>'>
+          </div>
+        </div>
+         
+        <button type="submit" class="btn btn-default">Update</button>
+        <a href="/event/delete/<%=event._id%>" class="btn btn-default" role="button" Onclick="ConfirmDelete()">Delete</a>
+        
+
+
+
+        
+      </form>
+    <%  }); %>
+</div>
+
+
+<script>
+  
+  function ConfirmDelete()
+{
+  window.alert("You have deleted the EVENT!!!");
+  var result = str.link("https://sports-olanigan.c9.io/event");
+}
+ 
+  
+</script>   
+
+
+<% include footer %>

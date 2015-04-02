@@ -1,0 +1,12 @@
+<!-- This file shows the events sorted by type -->
+<!-- It seems that this file can be removed -->
+
+<ul>
+    <h1>Events ordered by type</h1>
+    <% events.forEach(function(event){ %>
+        <li>
+            <p><%=event.Title%> - <%=event.Description%> - <%=event.Place%> - <%=event.Access%></p>
+        </li>
+        
+    <% }); %>
+</ul>

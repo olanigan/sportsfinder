@@ -1,0 +1,22 @@
+<!-- This is the main webpage of the site -->
+<% include header %>
+
+</head>
+<body>
+  <% include navbar %>
+
+  <div class="col-md-12 containerDown">
+    <div class="col-md-2 twoSidesLeft">
+      <label class="control-label">Introduce the facility you are looking for:</label>
+      <!-- This is the select menu that is in the left where the user selects the facility -->
+      <% include rousta2 %>
+    </div>
+    
+    <!-- Here goes the map -->    
+    <div class="col-md-9 twoSidesRight">
+      <div class="map-canvas-div" id="map-canvas"></div>
+    </div>
+  </div>
+  </script>
+</body>
+</html>

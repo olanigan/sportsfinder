@@ -1,0 +1,122 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+  padding: 20px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+color: #fff;
+background-color: #428bca;
+}
+
+.margintop20 {
+    margin-top:20px;
+}
+
+.nav-pills>li>a {
+border-radius: 2px;
+}
+
+a {
+color: #000;
+text-decoration: none;
+}
+
+a:hover {
+color: #000;
+text-decoration: none;
+}
+
+
+.nav-stacked>li+li {
+margin-top: 0px;
+margin-left: 0;
+border-bottom:1px solid #dadada;
+border-left:1px solid #dadada;
+border-right:1px solid #dadada;
+}
+
+#topnav li {display:inline-block;}
+#topnav {text-align:center;}
+
+.logo{
+  margin-top: -10px;
+  width: 50px;
+  height: 43px;
+}
+
+.containerDown{
+  padding-top: 50px !important;
+  height:0;
+}
+
+#map-canvas {
+  margin: 0;
+  padding: 0;
+  height: 300px;
+}
+
+.twoSidesLeft{
+  margin-top: 2em;
+}
+
+.twoSidesRight{
+  margin-top: 2em;
+  margin-left: 1em;
+}
+
+/*for login window */
+
+
+.panel-heading {
+    padding: 5px 15px;
+}
+
+.panel-footer {
+	padding: 1px 15px;
+	color: #A0A0A0;
+}
+
+.profile-img {
+	width: 96px;
+	height: 96px;
+	margin: 0 auto 10px;
+	display: block;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+
+.ball{
+    float: right;
+    position: relative;
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    right:  -50px;
+    bottom: 60px;
+    height: 120px;
+    width: 120px;
+}
+
+.noOverflow{
+  overflow: hidden;
+}
+
+.imgNewEvent{
+  width: 75%;
+}
+
+
+
+

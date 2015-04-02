@@ -1,0 +1,94 @@
+<!-- CLEANED AND COMMENTED -->
+
+<!-- This file contains the form to create a new event -->
+
+<% include header %>
+<body>
+  <% include navbar %>
+
+    <div class="containerDown">
+      <div class="col-md-5 twoSidesLeft">
+        <form class="form-horizontal" action="/event" method="post">
+        <fieldset>
+        
+          <!-- Form Name -->
+          <legend>Create Event</legend>
+          
+          <!-- Title Text input-->
+          <div class="control-group">
+            <label class="control-label" for="title">Title of the event</label>
+            <div class="controls">
+              <input id="title" name="title" placeholder="Enter title" class="input-xlarge" required="" type="text">
+            </div>
+          </div>
+          
+          <!-- Description Textarea -->
+          <div class="control-group">
+            <label class="control-label" for="desc">Description</label>
+            <div class="controls">                     
+              <textarea id="desc" name="desc" placeholder="Enter the description" required=""></textarea>
+            </div>
+          </div>
+          
+          <!-- Date input -->
+          <div class="control-group">
+            <label class="control-label" for="date">Date</label>
+            <div class="controls">
+              <input type="date" name="date" required="">
+            </div>
+          </div>
+          
+          <!-- Address Text input-->
+          <div class="control-group">
+            <label class="control-label" for="address">Address</label>
+            <div class="controls">
+              <input id="address" name="address" placeholder="Enter the address" class="input-xlarge" required="" type="text">
+            </div>
+          </div>
+          
+          <!-- Access checkbox -->
+          <div class="control-group">
+            <label class="control-label" for="access">Public</label>
+            <div class="controls">
+              <input type="checkbox" name="access">
+            </div>
+          </div>
+          
+          <!-- Type of facility -->
+          <div class="control-group">
+            <label for="facility">Select Facility: </label><br />
+            <!-- Includes the view rousta2 with all the sport facilitise-->
+            <% include rousta2 %>
+          </div>
+               
+          <!-- Number of guests -->
+          <div class="control-group">
+            <label class="control-label" for="maxguests">Max. guests</label>
+            <div class="controls">
+              <input type="number" name="maxguests" required="">
+            </div>
+          </div>
+          
+           <!-- Password text input-->
+          <div class="control-group">
+            <label class="control-label" for="password">Password</label>
+            <div class="controls">
+              <input id="password" name="password" placeholder="Enter your password" class="input-xlarge" required="" type="text">
+            </div>
+          </div>
+          <br>
+          
+          <!-- Send button -->
+          <div class="control-group">
+            <div class="controls">
+              <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            </div>
+          </div>
+        </fieldset>
+        </form>
+      </div>
+    <div class="col-md-6 twoSidesRight">
+      <img class="imgNewEvent" src="http://upload.wikimedia.org/wikipedia/commons/9/92/Youth-soccer-indiana.jpg">
+    </div>
+  </div>
+<% include footer %>

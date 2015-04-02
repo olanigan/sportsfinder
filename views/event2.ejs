@@ -1,0 +1,41 @@
+
+ <% include header %>
+
+<body>
+<% include navbar%>
+
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div>
+</div>
+
+<div class="row containerDown"></div>
+<h1><a href="/event/new" class="btn btn-primary btn-lg btn-block" role="button">Create your event right now!</a></h1>
+<div class="row">
+  <% events.forEach(function(event){ %>
+  <div class="col-sm-6 col-md-3">
+      <ul class="thumbnails"> 
+        <li class="span5 noOverflow">
+         <h3><%=event.Title%></h3>
+          <p><%=event.Description%></p>
+          <p><a href="/event/edit/<%=event._id%>" class="btn btn-primary" role="button">Edit</a> <a href="/event/delete/<%=event._id%>" class="btn btn-default" role="button">Delete</a></p>
+         <!<p> <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"> Modal</button></p>
+          <img class="ball" src="http://pixabay.com/static/uploads/photo/2013/07/13/10/51/football-157931_640.png">
+        </div>
+        </ul>
+  <% }); %>
+</div>
+
+
+</body>
+</html>

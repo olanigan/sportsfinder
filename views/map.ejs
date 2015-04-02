@@ -1,0 +1,77 @@
+<!-- This pages shows a map. We are nto using this anymore -->
+<!-- It seems that we can delete this page -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <% include header%>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+var map;
+function initialize() {
+  var mapOptions = {
+    zoom: 8,
+    center: new google.maps.LatLng(61.058586, 28.1887893)
+  };
+  
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+
+	var infowindow = new google.maps.InfoWindow({
+   			content: ''
+		});
+		
+		
+	// var data = $.getJSON("/facility/map.json", function(json){
+	// 	console.log('get JSON success');
+	// 	 if(json && (json.length > 0)){
+		 
+	// 	 	$.each(json, function() {
+	// 	 		marker_maker(this.Name, this.YWGS84, this.XWGS84); 
+		 		
+	// 	 	});
+	// 	 }
+	
+	// });
+	
+	function marker_maker(name_place,lat,lng){
+
+			var marker = new google.maps.Marker({
+				position: new google.maps.LatLng(lat, lng),
+		 		map: map,
+				title: name_place,
+				icon: {
+		  			url: 'http://upload.wikimedia.org/wikipedia/commons/6/6f/Flag_icon_darkblue.svg',
+		  			scaledSize: new google.maps.Size(35, 35)
+	  			},
+				animation: google.maps.Animation.DROP}); 
+		
+		google.maps.event.addListener(marker,'click',function() { 
+			map.setZoom(20);
+			map.setCenter(marker.getPosition());					 
+			infowindow.open(map,marker);
+			var contentString = 'Sport Faclity Name: '+name_place;		
+			infowindow.setContent(contentString); 
+		});		
+
+		return marker;
+	}
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+
+<body>
+
+ 
+<div id="map-canvas"></div>
+
+
+</body>
+</html>
+

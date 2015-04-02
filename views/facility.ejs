@@ -1,0 +1,12 @@
+<!-- This file shows the facilities by type -->
+<!-- It seems that it can be erased -->
+
+<ul>
+    <p>Hello Junkies</p>
+    <% facilities.forEach(function(facility){ %>
+        <li>
+            <p><%=facility.Code%> - <%=facility.Type%> - <%=facility.Name%></p>
+        </li>
+        
+    <% }); %>
+</ul>

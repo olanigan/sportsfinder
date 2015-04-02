@@ -1,0 +1,36 @@
+<!-- This file is not related to the project -->
+<!-- It seems that the file can be removed with no harm -->
+<!-- Rousta is creating files everywhere, even in the projects of the other teams -->
+
+<script>
+  var availableTags;
+  $(function() {
+    availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  });
+  </script>

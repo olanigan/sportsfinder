@@ -1,0 +1,9 @@
+<!-- This file shows the list of sport facilities -->
+<!-- It seems that this file can be removed -->
+
+<ul class="nav nav-pills nav-stacked">
+ <li class="active"><a href="#"><span class="glyphicon glyphicon-chevron-right"></span> List of Sports Facilities</a></li>
+ <% types.forEach(function(type){ %>
+  <li><a href="#" onclick="typeClick('<%=type%>')"><span class="glyphicon glyphicon-chevron-right"></span><%=type%></a></li>
+  <% }); %>
+</ul>
