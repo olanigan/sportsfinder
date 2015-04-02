@@ -13,7 +13,7 @@ Web application for finding sports facilities and events in Lappeenranta. This i
 
 ## 
 
-<a href="https://sports-olanigan.c9.io/">Application Website</a>
+<a href="https://sports-olanigan.c9.io/">Application Website</a><br />
 <a href="http://codecamp.fi/doku.php/opendata2015/group1/start">Wiki page</a>
 
 ## Technologies used
